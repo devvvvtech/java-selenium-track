@@ -14,7 +14,7 @@ public class LoginPage {
 
     //Locator + Actions (combine them)
     public void enterUsername(String username) {
-        driver.findElement(By.id("username")).sendKeys(username);
+        driver.findElement(By.id("user-name")).sendKeys(username);
     }
 
     public void enterPassword(String password) {
@@ -22,7 +22,7 @@ public class LoginPage {
     }
 
     public void clickLogin() {
-        driver.findElement(By.id("loginButton")).click();
+        driver.findElement(By.id("login-button")).click();
     }
 
 
