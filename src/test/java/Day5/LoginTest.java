@@ -22,8 +22,7 @@ public class LoginTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("standard_user", "secret_sauce");
 
-        String currentUrl = driver.getCurrentUrl();
-        Assert.assertTrue(currentUrl.contains("inventory"), "Login failed — user not redirected to inventory page.");
+        Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed — not on inventory page.");
     }
 
     @AfterMethod
