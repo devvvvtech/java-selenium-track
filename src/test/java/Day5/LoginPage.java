@@ -31,6 +31,7 @@ public class LoginPage {
         loginButton.click();
     }
 
+    //check for successful login
     public boolean isLoginSuccessful() {
         return driver.getCurrentUrl().contains("inventory");
     }
