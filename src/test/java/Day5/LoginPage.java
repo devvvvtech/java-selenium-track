@@ -19,6 +19,7 @@ public class LoginPage {
     WebElement loginButton;
 
     //constructor + init
+    //Find all the @FindBy-annotated WebElements in this class, and link them to real elements on the web page using the given WebDriver
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
