@@ -1,6 +1,7 @@
 package Day6;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class DataProviderTest {
 
@@ -12,5 +13,11 @@ public class DataProviderTest {
                 {"problem_user", "secret_sauce"}
 
         };
+    }
+
+    @Test(dataProvider = "loginData")
+    public void loginTest(String username, String password) {
+        System.out.println("Username: " + username);
+        System.out.println("Password: " + password);
     }
 }
